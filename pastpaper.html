@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduHub - Past Papers</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#0d47a1;
+      color:white;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffca28;
+    }
+
+    /* HEADER */
+    .header{
+      background:linear-gradient(rgba(13,71,161,0.85), rgba(13,71,161,0.85)),
+      url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      padding:100px 10%;
+    }
+
+    .header h2{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    .header p{
+      font-size:20px;
+      max-width:800px;
+      margin:auto;
+    }
+
+    /* SEARCH SECTION */
+    .search-section{
+      padding:40px 8%;
+      text-align:center;
+    }
+
+    .search-section input{
+      width:70%;
+      max-width:700px;
+      padding:15px;
+      border:1px solid #ccc;
+      border-radius:30px;
+      font-size:16px;
+    }
+
+    /* PAPERS SECTION */
+    .papers{
+      padding:40px 8% 80px;
+    }
+
+    .papers h2{
+      color:#0d47a1;
+      margin-bottom:30px;
+      font-size:38px;
+      text-align:center;
+    }
+
+    .paper-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .paper-card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .paper-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .paper-card h3{
+      color:#0d47a1;
+      margin-bottom:10px;
+    }
+
+    .paper-card p{
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:10px 18px;
+      border-radius:25px;
+      font-size:14px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .download{
+      background:#0d47a1;
+      color:white;
+    }
+
+    .download:hover{
+      background:#062b63;
+    }
+
+    .memo{
+      background:#ffca28;
+      color:#0d47a1;
+    }
+
+    .memo:hover{
+      background:#f4b400;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#062b63;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .header h2{
+        font-size:38px;
+      }
+
+      .search-section input{
+        width:100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>EduHub</h1>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pastpapers.html">Past Papers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="header">
+    <h2>Past Exam Papers</h2>
+
+    <p>
+      Access past papers and memorandums organized by subject, grade, and year
+      to improve revision and exam preparation.
+    </p>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <input type="text" placeholder="Search by subject, grade, or year...">
+  </section>
+
+  <!-- PAPERS -->
+  <section class="papers">
+
+    <h2>Available Documents</h2>
+
+    <div class="paper-grid">
+
+      <!-- PAPER 1 -->
+      <div class="paper-card">
+        <h3>📘 Mathematics Grade 12</h3>
+
+        <p>
+          Final Exam Paper - November 2025
+        </p>
+
+        <div class="buttons">
+          <a href="documents/math-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/math-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPER 2 -->
+      <div class="paper-card">
+        <h3>📗 Physical Sciences Grade 11</h3>
+
+        <p>
+          Mid-Year Exam Paper - June 2025
+        </p>
+
+        <div class="buttons">
+          <a href="documents/science-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/science-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPER 3 -->
+      <div class="paper-card">
+        <h3>📕 English Home Language Grade 10</h3>
+
+        <p>
+          Final Exam Paper - November 2024
+        </p>
+
+        <div class="buttons">
+          <a href="documents/english-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/english-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPER 4 -->
+      <div class="paper-card">
+        <h3>📙 Life Sciences Grade 12</h3>
+
+        <p>
+          Trial Exam Paper - September 2025
+        </p>
+
+        <div class="buttons">
+          <a href="documents/life-science-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/life-science-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPER 5 -->
+      <div class="paper-card">
+        <h3>📓 Geography Grade 11</h3>
+
+        <p>
+          Final Exam Paper - November 2025
+        </p>
+
+        <div class="buttons">
+          <a href="documents/geography-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/geography-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+      <!-- PAPER 6 -->
+      <div class="paper-card">
+        <h3>📔 Accounting Grade 12</h3>
+
+        <p>
+          Final Exam Paper - November 2025
+        </p>
+
+        <div class="buttons">
+          <a href="documents/accounting-paper.pdf" class="btn download" download>
+            Download Paper
+          </a>
+
+          <a href="documents/accounting-memo.pdf" class="btn memo" download>
+            Download Memo
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EduHub | Smart Learning for Every Student</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+```html id="9xk2pl"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduHub - Contact Us</title>
+ 
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#0d47a1;
+      color:white;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffca28;
+    }
+
+    /* HEADER */
+    .contact-header{
+      background:linear-gradient(rgba(13,71,161,0.8), rgba(13,71,161,0.8)),
+      url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      padding:100px 10%;
+    }
+
+    .contact-header h2{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    .contact-header p{
+      font-size:20px;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section{
+      padding:70px 8%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    /* CONTACT INFO */
+    .contact-info{
+      background:white;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h3{
+      color:#0d47a1;
+      margin-bottom:20px;
+      font-size:30px;
+    }
+
+    .contact-info p{
+      margin-bottom:20px;
+      line-height:1.7;
+    }
+
+    .info-box{
+      margin-bottom:20px;
+    }
+
+    .info-box h4{
+      color:#0d47a1;
+      margin-bottom:5px;
+    }
+
+    /* CONTACT FORM */
+    .contact-form{
+      background:white;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h3{
+      color:#0d47a1;
+      margin-bottom:20px;
+      font-size:30px;
+    }
+
+    .contact-form form{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      padding:15px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    .contact-form textarea{
+      resize:none;
+      height:150px;
+    }
+
+    .contact-form button{
+      background:#0d47a1;
+      color:white;
+      border:none;
+      padding:15px;
+      font-size:18px;
+      border-radius:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .contact-form button:hover{
+      background:#ffca28;
+      color:#0d47a1;
+    }
+
+    /* SUPPORT SECTION */
+    .support{
+      padding:60px 10%;
+      text-align:center;
+      background:#e8f0fe;
+    }
+
+    .support h2{
+      color:#0d47a1;
+      font-size:38px;
+      margin-bottom:20px;
+    }
+
+    .support p{
+      max-width:800px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#062b63;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      .contact-section{
+        grid-template-columns:1fr;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .contact-header h2{
+        font-size:40px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>EduHub</h1>
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="pastpaper.html">Past Papers</a></li>
+      <li><a href="planner.html">Study Planner</a></li>
+      <li><a href="dashbord.html">Dashboard</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="contact-header">
+    <h2>Contact EduHub</h2>
+
+    <p>
+      Need help with your studies, assignments, revision tools, or progress tracking?
+      We are here to support your learning journey.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+
+      <p>
+        EduHub provides students with access to past exam papers, personalized
+        study plans, quizzes, flashcards, assignment tracking, and smart reminders.
+        Contact us if you need assistance or have suggestions to improve the platform.
+      </p>
+
+      <div class="info-box">
+        <h4>📍 Address</h4>
+        <p>123 Learning Street, Education City</p>
+      </div>
+
+      <div class="info-box">
+        <h4>📧 Email</h4>
+        <p>support@eduhub.com</p>
+      </div>
+
+      <div class="info-box">
+        <h4>📞 Phone</h4>
+        <p>+27 12 345 6789</p>
+      </div>
+
+      <div class="info-box">
+        <h4>⏰ Support Hours</h4>
+        <p>Monday - Friday | 8:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+
+      <form>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <input type="email" placeholder="Enter your email address" required>
+
+        <input type="text" placeholder="Subject" required>
+
+        <textarea placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- SUPPORT SECTION -->
+  <section class="support">
+    <h2>Student Support Matters</h2>
+
+    <p>
+      EduHub is committed to helping students stay organized, improve academic
+      performance, and manage their studies effectively. Whether you need help
+      accessing revision resources, tracking assignments, or using the smart
+      study system, our support team is ready to assist you.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EduHub | Smart Learning for Every Student</p>
+  </footer>
+
+</body>
+</html>
+```

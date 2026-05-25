@@ -1,0 +1,276 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduHub - Smart Learning Platform</title>
+ 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#0d47a1;
+      color:white;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffca28;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      background:linear-gradient(rgba(13,71,161,0.8), rgba(13,71,161,0.8)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      padding:120px 10%;
+    }
+
+    .hero h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:800px;
+      margin:auto;
+      margin-bottom:30px;
+    }
+
+    .hero button{
+      background:#ffca28;
+      border:none;
+      padding:15px 35px;
+      font-size:18px;
+      border-radius:30px;
+      cursor:pointer;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      background:white;
+      color:#0d47a1;
+    }
+
+    /* FEATURES */
+    .features{
+      padding:70px 8%;
+      text-align:center;
+    }
+
+    .features h2{
+      font-size:40px;
+      color:#0d47a1;
+      margin-bottom:50px;
+    }
+
+    .feature-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px 20px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      color:#0d47a1;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      font-size:15px;
+      color:#555;
+    }
+
+    /* ABOUT */
+    .about{
+      background:#0d47a1;
+      color:white;
+      padding:70px 10%;
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .about p{
+      max-width:900px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#062b63;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .hero h2{
+        font-size:40px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>EduHub</h1>
+
+    <ul>
+      <li><a href="HOME.HTML">Home</a></li>
+      <li><a href="PASTPAPERS.HTML">Past Papers</a></li>
+      <li><a href="#">Study Planner</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="CONTACTUS.HTML">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Learn Smarter with EduHub</h2>
+
+    <p>
+      Access past exam papers, personalized revision tools, assignment tracking,
+      smart reminders, and progress monitoring — all in one powerful learning platform.
+    </p>
+
+    <button>Get Started</button>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Platform Features</h2>
+
+    <div class="feature-container">
+
+      <div class="card">
+        <h3>📚 Past Papers & Memos</h3>
+        <p>
+          Access exam papers organized by subject, grade, and year with detailed memorandums.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Smart Revision System</h3>
+        <p>
+          Personalized study plans, quizzes, and flashcards focused on weak areas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📅 Assignment Tracker</h3>
+        <p>
+          Manage homework, projects, and deadlines efficiently using a calendar view.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔔 Notifications & Reminders</h3>
+        <p>
+          Receive alerts one day before and on the submission day to stay on track.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📖 Catch-Up Mode</h3>
+        <p>
+          Missed work? Get notes, resources, and checklists to help you catch up quickly.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Progress Dashboard</h3>
+        <p>
+          Monitor performance, completed tasks, and study habits to stay motivated.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>Why Choose EduHub?</h2>
+
+    <p>
+      EduHub is designed to help students stay organized, revise effectively,
+      and improve academic performance. By combining learning resources,
+      productivity tools, and progress tracking into one centralized platform,
+      students can achieve their goals with confidence.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EduHub | Smart Learning for Every Student</p>
+  </footer>
+
+</body>
+</html>
+```

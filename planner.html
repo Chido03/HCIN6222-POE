@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduHub - Study Planner</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+    }
+
+    /* NAVBAR */
+    nav{
+      background:#0d47a1;
+      color:white;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffca28;
+    }
+
+    /* HEADER */
+    .header{
+      background:linear-gradient(rgba(13,71,161,0.85), rgba(13,71,161,0.85)),
+      url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+      padding:100px 10%;
+    }
+
+    .header h2{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    .header p{
+      font-size:20px;
+      max-width:800px;
+      margin:auto;
+    }
+
+    /* PLANNER SECTION */
+    .planner{
+      padding:70px 8%;
+    }
+
+    .planner h2{
+      text-align:center;
+      color:#0d47a1;
+      font-size:40px;
+      margin-bottom:40px;
+    }
+
+    /* TASK FORM */
+    .task-form{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom:40px;
+    }
+
+    .task-form form{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .task-form input,
+    .task-form select{
+      padding:14px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:15px;
+    }
+
+    .task-form button{
+      background:#0d47a1;
+      color:white;
+      border:none;
+      border-radius:10px;
+      padding:14px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .task-form button:hover{
+      background:#062b63;
+    }
+
+    /* TASK CARDS */
+    .task-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .task-card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      position:relative;
+    }
+
+    .task-card h3{
+      color:#0d47a1;
+      margin-bottom:10px;
+    }
+
+    .task-card p{
+      margin-bottom:10px;
+      color:#555;
+    }
+
+    /* STATUS BADGES */
+    .status{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:20px;
+      font-size:13px;
+      font-weight:bold;
+      margin-top:10px;
+    }
+
+    .urgent{
+      background:#ffebee;
+      color:#c62828;
+    }
+
+    .warning{
+      background:#fff8e1;
+      color:#ef6c00;
+    }
+
+    .safe{
+      background:#e8f5e9;
+      color:#2e7d32;
+    }
+
+    /* ALERT BOX */
+    .alert-box{
+      background:#ffca28;
+      color:#0d47a1;
+      padding:20px;
+      border-radius:15px;
+      margin-bottom:40px;
+      text-align:center;
+      font-weight:bold;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    footer{
+      background:#062b63;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .header h2{
+        font-size:38px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>EduHub</h1>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pastpapers.html">Past Papers</a></li>
+      <li><a href="planner.html">Study Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="header">
+    <h2>Smart Study Planner</h2>
+
+    <p>
+      Organize assignments, track deadlines, and receive reminders before tasks are due.
+      Stay productive and never miss an important submission again.
+    </p>
+  </section>
+
+  <!-- STUDY PLANNER -->
+  <section class="planner">
+
+    <h2>Your Study Schedule</h2>
+
+    <!-- ALERT -->
+    <div class="alert-box">
+      🔔 Reminder: Mathematics Assignment is due tomorrow at 08:00 AM!
+    </div>
+
+    <!-- TASK FORM -->
+    <div class="task-form">
+
+      <form>
+
+        <input type="text" placeholder="Enter Subject">
+
+        <input type="text" placeholder="Enter Task Name">
+
+        <input type="date">
+
+        <select>
+          <option>Select Priority</option>
+          <option>High Priority</option>
+          <option>Medium Priority</option>
+          <option>Low Priority</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+
+      </form>
+
+    </div>
+
+    <!-- TASKS -->
+    <div class="task-container">
+
+      <!-- TASK 1 -->
+      <div class="task-card">
+
+        <h3>📘 Mathematics Assignment</h3>
+
+        <p><strong>Due Date:</strong> 23 May 2026</p>
+
+        <p>
+          Complete algebra and calculus exercises from Chapter 5.
+        </p>
+
+        <span class="status urgent">
+          Due Tomorrow
+        </span>
+
+      </div>
+
+      <!-- TASK 2 -->
+      <div class="task-card">
+
+        <h3>📗 Physical Sciences Project</h3>
+
+        <p><strong>Due Date:</strong> 25 May 2026</p>
+
+        <p>
+          Prepare research presentation on renewable energy.
+        </p>
+
+        <span class="status warning">
+          Due in 3 Days
+        </span>
+
+      </div>
+
+      <!-- TASK 3 -->
+      <div class="task-card">
+
+        <h3>📕 English Essay</h3>
+
+        <p><strong>Due Date:</strong> 30 May 2026</p>
+
+        <p>
+          Write a 1000-word essay on social media influence.
+        </p>
+
+        <span class="status safe">
+          On Track
+        </span>
+
+      </div>
+
+      <!-- TASK 4 -->
+      <div class="task-card">
+
+        <h3>📙 Geography Homework</h3>
+
+        <p><strong>Due Date:</strong> 28 May 2026</p>
+
+        <p>
+          Complete climate and weather worksheet activities.
+        </p>
+
+        <span class="status warning">
+          Due Soon
+        </span>
+
+      </div>
+
+      <!-- TASK 5 -->
+      <div class="task-card">
+
+        <h3>📓 Accounting Test Revision</h3>
+
+        <p><strong>Due Date:</strong> 01 June 2026</p>
+
+        <p>
+          Revise financial statements and ledger accounts.
+        </p>
+
+        <span class="status safe">
+          Well Prepared
+        </span>
+
+      </div>
+
+      <!-- TASK 6 -->
+      <div class="task-card">
+
+        <h3>📔 Life Sciences Research</h3>
+
+        <p><strong>Due Date:</strong> 24 May 2026</p>
+
+        <p>
+          Complete notes on genetics and inheritance patterns.
+        </p>
+
+        <span class="status urgent">
+          Due in 1 Day
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 EduHub | Smart Learning for Every Student</p>
+  </footer>
+
+</body>
+</html>
